@@ -6,7 +6,7 @@ import driver.Driver;
 
 public aspect NIOAspect extends NIOAbstract {
 	
-	pointcut driver() : if(new Driver().isActivated("nio"));
+	pointcut driver() : if(new Driver().isActivated("nio") && !(new Driver().isActivated("io")));
 	
 	pointcut fileManagerConstructor(EnvironmentImpl envImpl, File dbEnvHome,
 			boolean readOnly) 

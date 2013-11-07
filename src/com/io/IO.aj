@@ -7,7 +7,7 @@ import driver.Driver;
 
 public aspect IO extends IOAbstract {
 
-	pointcut driver() : if(new Driver().isActivated("io"));
+	pointcut driver() : if(new Driver().isActivated("io") && !(new Driver().isActivated("nio")));
 
 	pointcut fileManagerConstructor(EnvironmentImpl envImpl, File dbEnvHome,
 			boolean readOnly) 

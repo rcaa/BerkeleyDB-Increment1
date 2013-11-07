@@ -282,10 +282,10 @@ public class MemoryBudget extends LogBufferBudget {
 
 		if (is64) {
 			if (isJVM14) {
-				RuntimeException RE = new RuntimeException(
-						"1.4 based 64 bit JVM not supported");
-				RE.printStackTrace(System.err);
-				throw RE;
+//				RuntimeException RE = new RuntimeException(
+//						"1.4 based 64 bit JVM not supported");
+//				RE.printStackTrace(System.err);
+//				throw RE;
 			}
 			LONG_OVERHEAD = LONG_OVERHEAD_64;
 			BYTE_ARRAY_OVERHEAD = BYTE_ARRAY_OVERHEAD_64;

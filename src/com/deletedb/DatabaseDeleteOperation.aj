@@ -10,7 +10,7 @@ import driver.Driver;
 
 public privileged aspect DatabaseDeleteOperation extends DatabaseDeleteOperationAbstract {
 
-	pointcut driver() : if(new Driver().isActivated("deleteDB"));
+	pointcut driver() : if(new Driver().isActivated("deletedb"));
 
 	pointcut hook_checkDeletedDb(DatabaseImpl db, Cleaner cleaner) 
 	 : DatabaseDeleteOperationAbstract.hook_checkDeletedDb(db, cleaner) 
